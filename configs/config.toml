@@ -1,0 +1,110 @@
+# 运行模式(debug:调试,test:测试,release:正式)
+runMode = "debug"
+
+# 是否启用swagger
+swagger = true
+swaggerDocpath = "../../docs"
+
+# http监听端口
+[http]
+port = 5200
+readTimeout = 5
+writeTimeout = 240
+idleTimeout = 15
+
+[app]
+disableOrphanBlock = true
+disableMessagePoolSync = true
+disableChainSync = false
+
+
+[lotus.47]
+# 地址
+#uri = "183.178.178.130:22034"
+uri = "172.30.22.12:1234"
+# 节点名
+name = "lotus-node-1"
+token = ""
+
+[lotus.full]
+# 地址
+#uri = "183.178.178.130:22034"
+uri = "172.30.22.12:1234"
+# 节点名
+name = "lotus-node-1"
+token = ""
+
+[ThirdParty]
+# 交易所
+GateioPriceUrl = "https://data.gateapi.io/api2/1/ticker/fil_usdt"
+
+# redis配置信息
+[redis]
+# 地址
+addr = "172.30.56.86:6379"
+# 密码
+password = ""
+db = 0
+
+[ssdb]
+# 连接地址
+#host = "172.18.248.5"
+host = "172.30.22.12"
+# 连接端口
+port = 8888
+auth = ""
+timeout = 20
+maxconn = 10
+
+[log]
+path = "./log/"
+# 日志级别(0-panic,fatal-1,err-2,warn-3,info-4,debug-5,trace-6)
+level = 6
+# 指定日志输出的文件路径
+fileName = "app.log"
+
+[mongodb]
+uri = "mongodb://chihua:leUgqL4hvceQ0uO@172.30.22.12:20023/aleo_chain"
+dataBase = "aleo_chain"
+userName = ""
+password = ""
+parameters = ""
+connectTimeout = 0
+connectPoolSize = 0
+socketTimeout = 0
+
+
+[email]
+mailDriver = "smtp"
+# mailFormName = "chihua"
+# mailFromAddress = "admin@chihua.io"
+# mailHost = "smtp.exmail.qq.com"
+# mailPassword = "Ch202304"
+# mailUsername = "admin@chihua.io"
+mailFormName = "zklink"
+mailFromAddress = "admin@zklink.hk"
+mailHost = "smtp.exmail.qq.com"
+mailPassword = "Chihua@123"
+mailUsername = "admin@zklink.hk"
+mailPort = 465
+
+
+[jwt]
+secret= "go-admin"
+timeout= 3600000
+overTime= 3600
+#[nsq]
+#lookups = []
+#nsqds=["172.18.248.5:4150"]
+#clientId = ""
+#timeout = 0
+
+[ipmaps]
+[ipmaps.geo]
+type="geo"
+appId="333815"
+appKey="7lplwJa85amKsKqN"
+[ipmaps.tx]
+Type="tx"
+AppId=""
+AppKey="GFLBZ-WTMKS-E7POF-6RQME-5MNL6-4RFHN"
